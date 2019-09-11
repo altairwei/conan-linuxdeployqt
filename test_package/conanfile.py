@@ -15,5 +15,6 @@ class QtWidgetsApplicationTestConan(ConanFile):
     def test(self):
         executable = os.path.join(self.build_folder, "QtWidgetsApplication")
         self.run("linuxdeployqt %s -unsupported-allow-new-glibc" % executable, run_environment=True)
-        self.run(executable)
+        # Avoid running test executable on machines which haven't displays.
+        #self.run(executable)
         return
