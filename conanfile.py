@@ -2,13 +2,13 @@ import os, stat
 from conans import ConanFile
 from conans.client import tools
 
-
 class LinuxdeployqtConan(ConanFile):
     name = "linuxdeployqt"
     # Conan: Valid names must contain at least 2 characters.
     version = "v6"
     license = "GPLv3", "LGPLv3"
     url = "https://github.com/altairwei/conan-linuxdeployqt.git"
+    homepage = "https://github.com/probonopd/linuxdeployqt"
     settings = "os_build", "arch_build"
     build_policy = "missing"
     description = '''Makes Linux applications self-contained by copying in the
